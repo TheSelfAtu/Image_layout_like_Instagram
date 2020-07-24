@@ -1,0 +1,193 @@
+li {
+  list-style: none;
+}
+
+/* 画像が６枚以上の時に表示できていない画像の数を表す */
+.showNum {
+  position: absolute;
+  right: 0%;
+  bottom: 0%;
+  width: 8rem;
+  height: 5rem;
+  background-color: black;
+  color: white;
+  opacity: 0.5;
+  text-align: center;
+  line-height: 5rem;
+}
+
+.js-gallery img {
+  display: none;
+}
+
+#images-wrapper {
+  max-width: 70%;
+  max-height: 25rem;
+  position: relative;
+  display: grid;
+  grid-gap: 6px;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr ;
+  grid-template-columns: 1fr 1fr 1fr  1fr 1fr 1fr; 
+
+}
+
+img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  max-height: 30rem;
+}
+/* 画像２枚の並び */
+/* 一枚目が横 */
+.img2yoko {
+  grid-row: 1/4;
+  grid-column: 1/7;
+}
+.img2yoko2 {
+  grid-row: 4/7;
+  grid-column: 1/7;
+}
+
+/* 一枚が縦長 */
+.img2tate {
+  grid-row: 1/7;
+  grid-column: 1/4;
+}
+.img2tate2 {
+  grid-row: 1/7;
+  grid-column: 4/7;
+}
+
+/* 画像３枚の並び */
+/* 一枚目が横 */
+.img3yoko {
+  grid-row: 1/4;
+  grid-column: 1/7;
+}
+.img3yoko2 {
+  grid-row: 4/7;
+  grid-column: 1/4;
+}
+
+.img3yoko3 {
+  grid-row: 4/7;
+  grid-column: 4/7;
+}
+
+/* 一枚が縦長 */
+.img3tate {
+  grid-row: 1/7;
+  grid-column: 1/4;
+}
+.img3tate2 {
+  grid-row: 1/4;
+  grid-column: 4/7;
+}
+
+.img3tate3 {
+  grid-row: 4/7;
+  grid-column: 4/7;
+}
+/* 画像４枚の並び */
+/* 一枚目が横 */
+.img4yoko {
+  grid-row: 1/4;
+  grid-column: 1/7;
+}
+.img4yoko2 {
+  grid-row: 4/7;
+  grid-column: 1/3;
+}
+
+.img4yoko3 {
+  grid-row: 4/7;
+  grid-column: 3/5;
+}
+
+.img4yoko4 {
+  grid-row: 4/7;
+  grid-column: 5/7;
+}
+/* 一枚が縦長 */
+.img4tate {
+  grid-row: 1/7;
+  grid-column: 1/4;
+}
+.img4tate2 {
+  grid-row: 1/3;
+  grid-column: 4/7;
+}
+
+.img4tate3 {
+  grid-row: 3/5;
+  grid-column: 4/7;
+}
+.img4tate4 {
+  grid-row: 5/7;
+  grid-column: 4/7;
+}
+
+/* １枚目が正方形 */
+.square1 {
+  grid-row: 1 / span 3;
+  grid-column: 1/ span 3;
+}
+.square2 {
+  grid-row: 4 / span 3;
+  grid-column: 1/ span 3;
+}
+.square3 {
+  grid-row: 1 / span 3;
+  grid-column: 4/ span 3;
+}
+.square4 {
+  grid-row: 4 / span 3;
+  grid-column: 4/ span 3;
+}
+
+/* 画像5枚の並び    */
+/* 一枚目が横 */
+.img5yoko {
+  grid-row: 1/4;
+  grid-column: 1/4;
+}
+.img5yoko2 {
+  grid-row: 1/4;
+  grid-column: 4/7;
+}
+
+.img5yoko3 {
+  grid-row: 4/7;
+  grid-column: 1/3;
+}
+
+.img5yoko4 {
+  grid-row: 4/7;
+  grid-column: 3/5;
+}
+.img5yoko5 {
+  grid-row: 4/7;
+  grid-column: 5/7;
+}
+/* 一枚が縦長 */
+.img5tate {
+  grid-row: 1/4;
+  grid-column: 1/4;
+}
+.img5tate2 {
+  grid-row: 4/7;
+  grid-column: 1/4;
+}
+
+.img5tate3 {
+  grid-row: 1/3;
+  grid-column: 4/7;
+}
+.img5tate4 {
+  grid-row: 3/5;
+  grid-column: 4/7;
+}
+.img5tate5 {
+  grid-row: 5/7;
+  grid-column: 4/7;
+}

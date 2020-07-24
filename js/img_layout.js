@@ -7,12 +7,13 @@ function getImages() {
 
 // 画像の中で一番大きな画像を探して配列の０番目に格納
 function sortImages(imglist) {
-     console.log(largest_img = imglist[0].childNodes[0])
+     console.log(largest_img = imglist[0])
      largest_img = imglist[0].childNodes[0]
      largest_size = 0
      index = 0
      for (let step = 0; step < imglist.length; step++) {
           size = imglist[step].childNodes[0].width * imglist[step].childNodes[0].height
+
           if (step > 4) {
                break
           }
@@ -25,17 +26,25 @@ function sortImages(imglist) {
      tmp = imglist[0]
      imglist[0] = largest_img
      imglist[index] = tmp
+
+     if (imglist.length > 5) {
+          imglist[4].childNodes[0].style.opacity = 0.4
+          remainNum(imglist, imglist[4])
+     }
      return imglist
 }
 
 // 全部の画像の枚数からマイナス５した数を表示する
-function remainNum(imagelist) {
-     var element = document.getElementById("shownum");
+function remainNum(imagelist, fifthatag) {
      var showNum = imagelist.length - 5
      if (showNum > 0) {
-          element.classList.add('showNum');
-          element.innerHTML = '+' + showNum
-
+          fifthatag.classList.add('showNum');
+          createelement = document.createElement('span')
+          createtext = document.createTextNode('+'+showNum)
+          createelement.appendChild(createtext)
+          createelement.classList.add('showNumtext')
+          fifthatag.appendChild(createelement)
+          console.log(createelement)
      }
 }
 
@@ -121,7 +130,6 @@ var imglist = getImages();
 var imgnum = imglist.length
 var element = document.getElementById("images-wrapper");
 var imglist = sortImages(imglist)
-remainNum(imglist)
 
 if (imgnum === 2) {
      img2align(imglist)
